@@ -128,7 +128,6 @@ class BerandaPage extends StatelessWidget {
                 const SizedBox(height: 40),
                 Container(
                   width: double.infinity,
-                  height: 50,
                   margin: EdgeInsets.fromLTRB(37, 0, 37, 0),
                   child: ElevatedButton(
                     onPressed: () {
@@ -140,19 +139,29 @@ class BerandaPage extends StatelessWidget {
                       );
                     },
                     style: btnHome,
-                    child: Text(
-                      'Presensi',
-                      style: cBlackTextStyle.copyWith(
-                        fontWeight: FontWeight.normal,
-                        fontSize: 20,
-                      ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          'Presensi',
+                          style: cBlackTextStyle.copyWith(
+                            fontWeight: FontWeight.normal,
+                            fontSize: 20,
+                          ),
+                        ),
+                        SizedBox(width: 10),
+                        Image.asset(
+                          'assets/calendar.png',
+                          height: 20,
+                          width: 20,
+                        ),
+                      ],
                     ),
                   ),
                 ),
                 const SizedBox(height: 40),
                 Container(
                   width: double.infinity,
-                  height: 50,
                   margin: EdgeInsets.fromLTRB(37, 0, 37, 0),
                   child: ElevatedButton(
                     onPressed: () {
@@ -164,12 +173,23 @@ class BerandaPage extends StatelessWidget {
                       );
                     },
                     style: btnHome,
-                    child: Text(
-                      'Laporan Target Kerja Harian',
-                      style: cBlackTextStyle.copyWith(
-                        fontWeight: FontWeight.normal,
-                        fontSize: 18,
-                      ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          'Laporan Target Kerja Harian',
+                          style: cBlackTextStyle.copyWith(
+                            fontWeight: FontWeight.normal,
+                            fontSize: 18,
+                          ),
+                        ),
+                        SizedBox(width: 10),
+                        Image.asset(
+                          'assets/new.png',
+                          height: 20,
+                          width: 20,
+                        ),
+                      ],
                     ),
                   ),
                 ),
@@ -190,12 +210,59 @@ class BerandaPage extends StatelessWidget {
                       );
                     },
                     style: btnHome,
-                    child: Text(
-                      'Laporan Slip Gaji',
-                      style: cBlackTextStyle.copyWith(
-                        fontWeight: FontWeight.normal,
-                        fontSize: 20,
-                      ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          'Laporan Slip Gaji',
+                          style: cBlackTextStyle.copyWith(
+                            fontWeight: FontWeight.normal,
+                            fontSize: 20,
+                          ),
+                        ),
+                        SizedBox(width: 10),
+                        Text(
+                          'Rp.',
+                          style: cBlackTextStyle.copyWith(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 40),
+                Container(
+                  width: double.infinity,
+                  margin: EdgeInsets.fromLTRB(37, 0, 37, 0),
+                  child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const BerandaPage(),
+                        ),
+                      );
+                    },
+                    style: btnHome,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          'Data Karyawan',
+                          style: cBlackTextStyle.copyWith(
+                            fontWeight: FontWeight.normal,
+                            fontSize: 18,
+                          ),
+                        ),
+                        SizedBox(width: 10),
+                        Image.asset(
+                          'assets/user.png',
+                          height: 20,
+                          width: 20,
+                        ),
+                      ],
                     ),
                   ),
                 ),
