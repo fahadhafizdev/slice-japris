@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:frontend_japris/module/page/home/beranda_page.dart';
+import 'package:frontend_japris/module/page/menu/menu_page.dart';
 import 'package:frontend_japris/module/page/register_page.dart';
 import 'package:frontend_japris/module/shared/theme.dart';
 
@@ -115,7 +116,7 @@ class LoginPage extends StatelessWidget {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => const BerandaPage(),
+                                builder: (context) => const MenuPage(),
                               ),
                             );
                           },

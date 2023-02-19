@@ -5,6 +5,7 @@ Color cGrey = const Color(0xffF6F6F6);
 Color cBlack = Colors.black;
 Color cBlue = const Color(0xff000080);
 Color cBlue2 = const Color(0xff2214EB);
+Color cWhite = Colors.white;
 
 // ignore: prefer_typing_uninitialized_variables
 var tinggi;
