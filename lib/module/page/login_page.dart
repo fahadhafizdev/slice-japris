@@ -3,6 +3,7 @@ import 'package:frontend_japris/module/page/home/beranda_page.dart';
 import 'package:frontend_japris/module/page/menu/menu_page.dart';
 import 'package:frontend_japris/module/page/register_page.dart';
 import 'package:frontend_japris/module/shared/theme.dart';
+import 'package:frontend_japris/module/widget/kel_snackbar.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -96,29 +97,28 @@ class LoginPage extends StatelessWidget {
                         margin: const EdgeInsets.symmetric(horizontal: 90),
                         child: ElevatedButton(
                           onPressed: () {
-                            // if (username.text == "royfasya" &&
-                            //     password.text == "12345") {
-                            //   Navigator.push(
-                            //     context,
-                            //     MaterialPageRoute(
-                            //       builder: (context) => const BerandaPage(),
-                            //     ),
-                            //   );
-                            // } else if (username.text == "admin" &&
-                            //     password.text == "admin") {
-                            //   Navigator.push(
-                            //     context,
-                            //     MaterialPageRoute(
-                            //       builder: (context) => const BerandaPage(),
-                            //     ),
-                            //   );
-                            // } else {}
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => const MenuPage(),
-                              ),
-                            );
+                            if (username.text == "royfasya" &&
+                                password.text == "12345") {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => const MenuPage(),
+                                ),
+                              );
+                            } else if (username.text == "admin" &&
+                                password.text == "admin") {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => const MenuPage(),
+                                ),
+                              );
+                            } else {
+                              KelSnackBar().show(
+                                title: 'Error',
+                                message: 'Lengkapi data dulu',
+                              );
+                            }
                           },
                           style: btnDefault,
                           child: Text(

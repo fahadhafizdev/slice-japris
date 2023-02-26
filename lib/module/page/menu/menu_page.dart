@@ -5,9 +5,12 @@ import 'package:frontend_japris/module/page/home/beranda_page.dart';
 import 'package:frontend_japris/module/page/menu/components/custom_tile.dart';
 import 'package:frontend_japris/module/page/menu/meu_controller.dart';
 import 'package:frontend_japris/module/page/presensi/presensi_view.dart';
+import 'package:frontend_japris/module/page/slip_gaji/slip_gaji_view.dart';
 import 'package:frontend_japris/module/page/target_kerja/target_kerja_view.dart';
 import 'package:frontend_japris/module/shared/theme.dart';
 import 'package:get/get.dart';
+
+import '../slip_gaji/slip_gaji.dart';
 
 class MenuPage extends StatelessWidget {
   const MenuPage({super.key});
@@ -66,7 +69,7 @@ class MenuPage extends StatelessWidget {
                 : c.page.value == 2
                     ? TargetKerjaView()
                     : c.page.value == 3
-                        ? SizedBox()
+                        ? SlipGaji()
                         : SizedBox(),
       );
     }
