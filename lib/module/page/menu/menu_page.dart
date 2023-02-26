@@ -5,6 +5,7 @@ import 'package:frontend_japris/module/page/home/beranda_page.dart';
 import 'package:frontend_japris/module/page/menu/components/custom_tile.dart';
 import 'package:frontend_japris/module/page/menu/meu_controller.dart';
 import 'package:frontend_japris/module/page/presensi/presensi_view.dart';
+import 'package:frontend_japris/module/page/target_kerja/target_kerja_view.dart';
 import 'package:frontend_japris/module/shared/theme.dart';
 import 'package:get/get.dart';
 
@@ -63,7 +64,7 @@ class MenuPage extends StatelessWidget {
             : c.page.value == 1
                 ? PresensiView()
                 : c.page.value == 2
-                    ? SizedBox()
+                    ? TargetKerjaView()
                     : c.page.value == 3
                         ? SizedBox()
                         : SizedBox(),

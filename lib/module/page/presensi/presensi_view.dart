@@ -1,7 +1,10 @@
+import 'dart:developer';
+
 import 'package:barcode_scan2/barcode_scan2.dart';
 import 'package:flutter/material.dart';
 import 'package:frontend_japris/module/shared/theme.dart';
 import 'package:frontend_japris/module/widget/custom_contain.dart';
+import 'package:frontend_japris/module/widget/kel_snackbar.dart';
 
 class PresensiView extends StatelessWidget {
   const PresensiView({super.key});
@@ -27,13 +30,24 @@ class PresensiView extends StatelessWidget {
             style: btnDefault,
             onPressed: () async {
               var result = await BarcodeScanner.scan();
-              if (result == null) {
+              if (result.rawContent.isEmpty || result.rawContent == null) {
+                KelSnackBar().show(
+                  title: 'Failed',
+                  message: 'Anda tidak berhasil melakukan presensi',
+                );
                 return;
               }
+
               print('format : ${result.format}');
               print('formatNote : ${result.formatNote}');
               print('rawContent : ${result.rawContent}');
               print('Type : ${result.type}');
+
+              KelSnackBar().show(
+                title: 'Success',
+                message: 'Anda telah berhasil melakukan presensi',
+                color: Colors.green,
+              );
             },
             child: Text(
               'Scan',

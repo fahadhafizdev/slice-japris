@@ -43,3 +43,12 @@ final ButtonStyle btnHome = ElevatedButton.styleFrom(
     ),
   ),
 );
+
+final ButtonStyle btnGreen = ElevatedButton.styleFrom(
+  backgroundColor: Color(0xff12F10D),
+  shape: const RoundedRectangleBorder(
+    borderRadius: BorderRadius.all(
+      Radius.circular(8),
+    ),
+  ),
+);
