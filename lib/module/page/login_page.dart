@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:frontend_japris/module/page/home/beranda_page.dart';
-import 'package:frontend_japris/module/page/menu/menu_page.dart';
+import 'package:frontend_japris/module/page/admin_modul/menu_admin/menu_admin.dart';
+import 'package:frontend_japris/module/page/user_modul/home_user/beranda_user.dart';
+import 'package:frontend_japris/module/page/user_modul/menu_user/menu_user.dart';
 import 'package:frontend_japris/module/page/register_page.dart';
 import 'package:frontend_japris/module/shared/theme.dart';
 import 'package:frontend_japris/module/widget/kel_snackbar.dart';
@@ -102,7 +103,7 @@ class LoginPage extends StatelessWidget {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => const MenuPage(),
+                                  builder: (context) => const MenuUser(),
                                 ),
                               );
                             } else if (username.text == "admin" &&
@@ -110,7 +111,7 @@ class LoginPage extends StatelessWidget {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => const MenuPage(),
+                                  builder: (context) => const MenuAdmin(),
                                 ),
                               );
                             } else {

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:frontend_japris/module/shared/theme.dart';
 
-class BerandaPage extends StatelessWidget {
-  const BerandaPage({super.key});
+class BerandaAdmin extends StatelessWidget {
+  const BerandaAdmin({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -131,12 +131,12 @@ class BerandaPage extends StatelessWidget {
                   margin: EdgeInsets.fromLTRB(37, 0, 37, 0),
                   child: ElevatedButton(
                     onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const BerandaPage(),
-                        ),
-                      );
+                      // Navigator.push(
+                      //   context,
+                      //   MaterialPageRoute(
+                      //     builder: (context) => const BerandaPage(),
+                      //   ),
+                      // );
                     },
                     style: btnHome,
                     child: Row(
@@ -165,12 +165,12 @@ class BerandaPage extends StatelessWidget {
                   margin: EdgeInsets.fromLTRB(37, 0, 37, 0),
                   child: ElevatedButton(
                     onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const BerandaPage(),
-                        ),
-                      );
+                      // Navigator.push(
+                      //   context,
+                      //   MaterialPageRoute(
+                      //     builder: (context) => const BerandaPage(),
+                      //   ),
+                      // );
                     },
                     style: btnHome,
                     child: Row(
@@ -202,12 +202,12 @@ class BerandaPage extends StatelessWidget {
                   margin: EdgeInsets.fromLTRB(37, 0, 37, 0),
                   child: ElevatedButton(
                     onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const BerandaPage(),
-                        ),
-                      );
+                      // Navigator.push(
+                      //   context,
+                      //   MaterialPageRoute(
+                      //     builder: (context) => const BerandaPage(),
+                      //   ),
+                      // );
                     },
                     style: btnHome,
                     child: Row(
@@ -238,12 +238,12 @@ class BerandaPage extends StatelessWidget {
                   margin: EdgeInsets.fromLTRB(37, 0, 37, 0),
                   child: ElevatedButton(
                     onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const BerandaPage(),
-                        ),
-                      );
+                      // Navigator.push(
+                      //   context,
+                      //   MaterialPageRoute(
+                      //     builder: (context) => const BerandaPage(),
+                      //   ),
+                      // );
                     },
                     style: btnHome,
                     child: Row(

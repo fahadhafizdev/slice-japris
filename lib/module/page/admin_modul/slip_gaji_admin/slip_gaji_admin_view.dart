@@ -2,16 +2,16 @@ import 'dart:developer';
 
 import 'package:barcode_scan2/barcode_scan2.dart';
 import 'package:flutter/material.dart';
-import 'package:frontend_japris/module/page/slip_gaji/controller/slip_gaji_controller.dart';
+import 'package:frontend_japris/module/page/admin_modul/slip_gaji_admin/controller/slip_gaji_controller.dart';
 import 'package:frontend_japris/module/shared/theme.dart';
 import 'package:frontend_japris/module/widget/custom_contain.dart';
 import 'package:frontend_japris/module/widget/kel_snackbar.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:get/instance_manager.dart';
 
-class SlipGajiView extends StatelessWidget {
+class SlipGajiAdminView extends StatelessWidget {
   final String title;
-  const SlipGajiView({super.key, required this.title});
+  const SlipGajiAdminView({super.key, required this.title});
 
   @override
   Widget build(BuildContext context) {

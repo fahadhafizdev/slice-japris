@@ -1,19 +1,20 @@
 import 'dart:ffi';
 
 import 'package:flutter/material.dart';
-import 'package:frontend_japris/module/page/home/beranda_page.dart';
-import 'package:frontend_japris/module/page/menu/components/custom_tile.dart';
-import 'package:frontend_japris/module/page/menu/meu_controller.dart';
-import 'package:frontend_japris/module/page/presensi/presensi_view.dart';
-import 'package:frontend_japris/module/page/slip_gaji/slip_gaji_view.dart';
-import 'package:frontend_japris/module/page/target_kerja/target_kerja_view.dart';
+import 'package:frontend_japris/module/page/admin_modul/home_admin/beranda_admin.dart';
+import 'package:frontend_japris/module/page/user_modul/home_user/beranda_user.dart';
+import 'package:frontend_japris/module/page/user_modul/menu_user/components/custom_tile.dart';
+import 'package:frontend_japris/module/page/user_modul/menu_user/meu_controller.dart';
+import 'package:frontend_japris/module/page/user_modul/presensi/presensi_view.dart';
+import 'package:frontend_japris/module/page/admin_modul/slip_gaji/slip_gaji_view.dart';
+import 'package:frontend_japris/module/page/user_modul/target_kerja/target_kerja_view.dart';
 import 'package:frontend_japris/module/shared/theme.dart';
 import 'package:get/get.dart';
 
 import '../slip_gaji/slip_gaji.dart';
 
-class MenuPage extends StatelessWidget {
-  const MenuPage({super.key});
+class MenuAdmin extends StatelessWidget {
+  const MenuAdmin({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -63,13 +64,13 @@ class MenuPage extends StatelessWidget {
     Widget content() {
       return Obx(
         () => c.page.value == 0
-            ? const BerandaPage()
+            ? const BerandaAdmin()
             : c.page.value == 1
-                ? PresensiView()
+                ? SizedBox()
                 : c.page.value == 2
                     ? TargetKerjaView()
                     : c.page.value == 3
-                        ? SlipGaji()
+                        ? SizedBox()
                         : SizedBox(),
       );
     }
