@@ -5,12 +5,13 @@ import 'package:frontend_japris/module/page/user_modul/home_user/beranda_user.da
 import 'package:frontend_japris/module/page/user_modul/menu_user/components/custom_tile.dart';
 import 'package:frontend_japris/module/page/user_modul/menu_user/meu_controller.dart';
 import 'package:frontend_japris/module/page/user_modul/presensi/presensi_view.dart';
-import 'package:frontend_japris/module/page/admin_modul/slip_gaji/slip_gaji_view.dart';
+import 'package:frontend_japris/module/page/admin_modul/slip_gaji_admin/slip_gaji_admin_view.dart';
+import 'package:frontend_japris/module/page/user_modul/slip_gaji_user/slip_gaji_user.dart';
 import 'package:frontend_japris/module/page/user_modul/target_kerja/target_kerja_view.dart';
 import 'package:frontend_japris/module/shared/theme.dart';
 import 'package:get/get.dart';
 
-import '../../admin_modul/slip_gaji/slip_gaji.dart';
+import '../../admin_modul/slip_gaji_admin/slip_gaji_admin.dart';
 
 class MenuUser extends StatelessWidget {
   const MenuUser({super.key});
@@ -69,7 +70,7 @@ class MenuUser extends StatelessWidget {
                 : c.page.value == 2
                     ? TargetKerjaView()
                     : c.page.value == 3
-                        ? SizedBox()
+                        ? SlipGajiUser()
                         : SizedBox(),
       );
     }

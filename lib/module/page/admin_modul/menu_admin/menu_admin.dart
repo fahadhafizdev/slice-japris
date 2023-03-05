@@ -6,12 +6,12 @@ import 'package:frontend_japris/module/page/user_modul/home_user/beranda_user.da
 import 'package:frontend_japris/module/page/user_modul/menu_user/components/custom_tile.dart';
 import 'package:frontend_japris/module/page/user_modul/menu_user/meu_controller.dart';
 import 'package:frontend_japris/module/page/user_modul/presensi/presensi_view.dart';
-import 'package:frontend_japris/module/page/admin_modul/slip_gaji/slip_gaji_view.dart';
+import 'package:frontend_japris/module/page/admin_modul/slip_gaji_admin/slip_gaji_admin_view.dart';
 import 'package:frontend_japris/module/page/user_modul/target_kerja/target_kerja_view.dart';
 import 'package:frontend_japris/module/shared/theme.dart';
 import 'package:get/get.dart';
 
-import '../slip_gaji/slip_gaji.dart';
+import '../slip_gaji_admin/slip_gaji_admin.dart';
 
 class MenuAdmin extends StatelessWidget {
   const MenuAdmin({super.key});
@@ -76,12 +76,13 @@ class MenuAdmin extends StatelessWidget {
     }
 
     return Scaffold(
-      body: Stack(
-        children: [
-          content(),
-          bottomNavbar(),
-        ],
-      ),
+      // body: Stack(
+      //   children: [
+      //     content(),
+      //     bottomNavbar(),
+      //   ],
+      // ),
+      body: Center(child: Text('Coming soon')),
     );
   }
 }
