@@ -2,6 +2,7 @@ import 'dart:ffi';
 
 import 'package:flutter/material.dart';
 import 'package:frontend_japris/module/page/admin_modul/home_admin/beranda_admin.dart';
+import 'package:frontend_japris/module/page/admin_modul/presensi_admin/presensi_admin_view.dart';
 import 'package:frontend_japris/module/page/user_modul/home_user/beranda_user.dart';
 import 'package:frontend_japris/module/page/user_modul/menu_user/components/custom_tile.dart';
 import 'package:frontend_japris/module/page/user_modul/menu_user/meu_controller.dart';
@@ -66,9 +67,9 @@ class MenuAdmin extends StatelessWidget {
         () => c.page.value == 0
             ? const BerandaAdmin()
             : c.page.value == 1
-                ? SizedBox()
+                ? PresensiAdmin()
                 : c.page.value == 2
-                    ? TargetKerjaView()
+                    ? SizedBox()
                     : c.page.value == 3
                         ? SizedBox()
                         : SizedBox(),
@@ -76,13 +77,12 @@ class MenuAdmin extends StatelessWidget {
     }
 
     return Scaffold(
-      // body: Stack(
-      //   children: [
-      //     content(),
-      //     bottomNavbar(),
-      //   ],
-      // ),
-      body: Center(child: Text('Coming soon')),
+      body: Stack(
+        children: [
+          content(),
+          bottomNavbar(),
+        ],
+      ),
     );
   }
 }

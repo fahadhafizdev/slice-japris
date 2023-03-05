@@ -36,7 +36,7 @@ final ButtonStyle btnDefault = ElevatedButton.styleFrom(
 );
 
 final ButtonStyle btnHome = ElevatedButton.styleFrom(
-  backgroundColor: Colors.white,
+  backgroundColor: cWhite,
   shape: const RoundedRectangleBorder(
     borderRadius: BorderRadius.all(
       Radius.circular(8),
