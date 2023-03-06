@@ -4,10 +4,12 @@ import 'package:frontend_japris/module/shared/theme.dart';
 class CustomTileV1 extends StatelessWidget {
   final String title;
   final Function() onTap;
+  final double fontSize;
   const CustomTileV1({
     super.key,
     required this.title,
     required this.onTap,
+    this.fontSize = 18.0,
   });
 
   @override
@@ -22,7 +24,7 @@ class CustomTileV1 extends StatelessWidget {
           title,
           style: cBlackTextStyle.copyWith(
             fontWeight: FontWeight.normal,
-            fontSize: 20,
+            fontSize: fontSize,
           ),
         ),
       ),

@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:frontend_japris/module/page/admin_modul/presensi_admin/presensi_admin_view.dart';
+import 'package:frontend_japris/module/page/user_modul/menu_user/meu_controller.dart';
 import 'package:frontend_japris/module/shared/theme.dart';
+import 'package:get/get.dart';
 
 class BerandaAdmin extends StatelessWidget {
   const BerandaAdmin({super.key});
 
   @override
   Widget build(BuildContext context) {
+    MenuController c = Get.find();
     return Scaffold(
       body: Stack(
         children: [
@@ -131,12 +135,7 @@ class BerandaAdmin extends StatelessWidget {
                   margin: EdgeInsets.fromLTRB(37, 0, 37, 0),
                   child: ElevatedButton(
                     onPressed: () {
-                      // Navigator.push(
-                      //   context,
-                      //   MaterialPageRoute(
-                      //     builder: (context) => const BerandaPage(),
-                      //   ),
-                      // );
+                      c.change(1);
                     },
                     style: btnHome,
                     child: Row(
@@ -165,12 +164,7 @@ class BerandaAdmin extends StatelessWidget {
                   margin: EdgeInsets.fromLTRB(37, 0, 37, 0),
                   child: ElevatedButton(
                     onPressed: () {
-                      // Navigator.push(
-                      //   context,
-                      //   MaterialPageRoute(
-                      //     builder: (context) => const BerandaPage(),
-                      //   ),
-                      // );
+                      c.change(2);
                     },
                     style: btnHome,
                     child: Row(
@@ -202,12 +196,7 @@ class BerandaAdmin extends StatelessWidget {
                   margin: EdgeInsets.fromLTRB(37, 0, 37, 0),
                   child: ElevatedButton(
                     onPressed: () {
-                      // Navigator.push(
-                      //   context,
-                      //   MaterialPageRoute(
-                      //     builder: (context) => const BerandaPage(),
-                      //   ),
-                      // );
+                      c.change(3);
                     },
                     style: btnHome,
                     child: Row(
@@ -238,12 +227,7 @@ class BerandaAdmin extends StatelessWidget {
                   margin: EdgeInsets.fromLTRB(37, 0, 37, 0),
                   child: ElevatedButton(
                     onPressed: () {
-                      // Navigator.push(
-                      //   context,
-                      //   MaterialPageRoute(
-                      //     builder: (context) => const BerandaPage(),
-                      //   ),
-                      // );
+                      c.change(4);
                     },
                     style: btnHome,
                     child: Row(
@@ -256,7 +240,7 @@ class BerandaAdmin extends StatelessWidget {
                             fontSize: 18,
                           ),
                         ),
-                        SizedBox(width: 10),
+                        const SizedBox(width: 10),
                         Image.asset(
                           'assets/user.png',
                           height: 20,
