@@ -9,12 +9,13 @@ import 'package:frontend_japris/module/widget/kel_snackbar.dart';
 import 'package:get/get.dart';
 
 class SlipGajiAdmin extends StatelessWidget {
-  const SlipGajiAdmin({super.key});
+  final String title;
+  const SlipGajiAdmin({super.key, required this.title});
 
   @override
   Widget build(BuildContext context) {
     return CustomContain(
-      data: 'Pelaporan Slip Gaji',
+      data: title,
       children: [
         SizedBox(
           height: tinggi * 0.18,

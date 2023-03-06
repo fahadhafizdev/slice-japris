@@ -3,6 +3,7 @@ import 'dart:ffi';
 import 'package:flutter/material.dart';
 import 'package:frontend_japris/module/page/admin_modul/home_admin/beranda_admin.dart';
 import 'package:frontend_japris/module/page/admin_modul/presensi_admin/presensi_admin_view.dart';
+import 'package:frontend_japris/module/page/admin_modul/slip_gaji_admin/slip_gaji_admin_list.dart';
 import 'package:frontend_japris/module/page/admin_modul/target_kerja_admin/target_kerja_admin_view.dart';
 import 'package:frontend_japris/module/page/user_modul/home_user/beranda_user.dart';
 import 'package:frontend_japris/module/page/user_modul/menu_user/components/custom_tile.dart';
@@ -72,7 +73,7 @@ class MenuAdmin extends StatelessWidget {
                 : c.page.value == 2
                     ? TargetKerjaAdmin()
                     : c.page.value == 3
-                        ? SizedBox()
+                        ? SlipGajiAdminlist()
                         : SizedBox(),
       );
     }
