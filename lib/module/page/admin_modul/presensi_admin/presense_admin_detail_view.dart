@@ -12,51 +12,28 @@ class PresensiAdminDetailView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomContain(
-      data: 'Presensi',
-      children: [
-        SizedBox(
-          height: tinggi * 0.3,
-        ),
-        Text(
-          'Silahkan scan QR-code presensi\ndibawah ini',
-          textAlign: TextAlign.center,
-          style: cBlackTextStyle.copyWith(fontSize: 16),
-        ),
-        const SizedBox(height: 20),
-        Container(
-          width: double.infinity,
-          margin: const EdgeInsets.symmetric(horizontal: 24),
-          child: ElevatedButton(
-            style: btnDefault,
-            onPressed: () async {
-              var result = await BarcodeScanner.scan();
-              if (result.rawContent.isEmpty || result.rawContent == null) {
-                KelSnackBar().show(
-                  title: 'Failed',
-                  message: 'Anda tidak berhasil melakukan presensi',
-                );
-                return;
-              }
-
-              print('format : ${result.format}');
-              print('formatNote : ${result.formatNote}');
-              print('rawContent : ${result.rawContent}');
-              print('Type : ${result.type}');
-
-              KelSnackBar().show(
-                title: 'Success',
-                message: 'Anda telah berhasil melakukan presensi',
-                color: Colors.green,
-              );
-            },
-            child: Text(
-              'Scan',
-              style: cWhiteTextStyle.copyWith(fontWeight: medium),
-            ),
+    return Scaffold(
+      body: CustomContain(
+        data: id == 1
+            ? 'Data Presensi Hari Ini'
+            : id == 2
+                ? 'Data Presensi Minggu Ini'
+                : id == 3
+                    ? 'Data Presensi Bulan Ini'
+                    : 'none',
+        children: [
+          SizedBox(
+            height: tinggi * 0.2,
           ),
-        ),
-      ],
+          Image.asset(
+            id == 1
+                ? 'assets/table.png'
+                : id == 2
+                    ? 'assets/table2.png'
+                    : 'assets/table3.png',
+          ),
+        ],
+      ),
     );
   }
 }
