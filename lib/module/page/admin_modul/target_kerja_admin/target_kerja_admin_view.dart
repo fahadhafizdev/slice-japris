@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:frontend_japris/module/page/admin_modul/presensi_admin/presense_admin_detail_view.dart';
+import 'package:frontend_japris/module/page/admin_modul/target_kerja_admin/target_kerja_admin_detail.dart';
 import 'package:frontend_japris/module/page/user_modul/menu_user/components/custom_tile.dart';
 import 'package:frontend_japris/module/widget/custom_contain.dart';
 import 'package:frontend_japris/module/widget/custom_tile_v1.dart';
@@ -22,35 +23,50 @@ class TargetKerjaAdmin extends StatelessWidget {
           title: 'Data Laporan Harian Karyawan 1',
           fontSize: 16,
           onTap: () {
-            // Get.to(const PresensiAdminDetailView(id: 1));
+            Get.to(
+              const TargetKerjaAdminDetail(
+                  title: 'Data Laporan Harian Karyawan 1'),
+            );
           },
         ),
         CustomTileV1(
           title: 'Data Laporan Harian Karyawan 2',
           fontSize: 16,
           onTap: () {
-            // Get.to(const PresensiAdminDetailView(id: 2));
+            Get.to(
+              const TargetKerjaAdminDetail(
+                  title: 'Data Laporan Harian Karyawan 2'),
+            );
           },
         ),
         CustomTileV1(
           title: 'Data Laporan Harian Karyawan 3',
           fontSize: 16,
           onTap: () {
-            // Get.to(const PresensiAdminDetailView(id: 3));
+            Get.to(
+              const TargetKerjaAdminDetail(
+                  title: 'Data Laporan Harian Karyawan 3'),
+            );
           },
         ),
         CustomTileV1(
           title: 'Data Laporan Harian Karyawan 4',
           fontSize: 16,
           onTap: () {
-            // Get.to(const PresensiAdminDetailView(id: 3));
+            Get.to(
+              const TargetKerjaAdminDetail(
+                  title: 'Data Laporan Harian Karyawan 4'),
+            );
           },
         ),
         CustomTileV1(
           title: 'Data Laporan Harian Karyawan 5',
           fontSize: 16,
           onTap: () {
-            // Get.to(const PresensiAdminDetailView(id: 3));
+            Get.to(
+              const TargetKerjaAdminDetail(
+                  title: 'Data Laporan Harian Karyawan 5'),
+            );
           },
         ),
       ],
