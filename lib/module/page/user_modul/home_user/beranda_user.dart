@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:frontend_japris/module/page/user_modul/menu_user/meu_controller.dart';
 import 'package:frontend_japris/module/shared/theme.dart';
+import 'package:get/get.dart';
 
 class BerandaUser extends StatelessWidget {
   const BerandaUser({super.key});
 
   @override
   Widget build(BuildContext context) {
+    MenuController c = Get.find();
     return Scaffold(
       body: Stack(
         children: [
@@ -131,12 +134,7 @@ class BerandaUser extends StatelessWidget {
                   margin: EdgeInsets.fromLTRB(37, 0, 37, 0),
                   child: ElevatedButton(
                     onPressed: () {
-                      // Navigator.push(
-                      //   context,
-                      //   MaterialPageRoute(
-                      //     builder: (context) => const BerandaPage(),
-                      //   ),
-                      // );
+                      c.change(1);
                     },
                     style: btnHome,
                     child: Row(
@@ -165,12 +163,7 @@ class BerandaUser extends StatelessWidget {
                   margin: EdgeInsets.fromLTRB(37, 0, 37, 0),
                   child: ElevatedButton(
                     onPressed: () {
-                      // Navigator.push(
-                      //   context,
-                      //   MaterialPageRoute(
-                      //     builder: (context) => const BerandaPage(),
-                      //   ),
-                      // );
+                      c.change(2);
                     },
                     style: btnHome,
                     child: Row(
@@ -202,12 +195,7 @@ class BerandaUser extends StatelessWidget {
                   margin: EdgeInsets.fromLTRB(37, 0, 37, 0),
                   child: ElevatedButton(
                     onPressed: () {
-                      // Navigator.push(
-                      //   context,
-                      //   MaterialPageRoute(
-                      //     builder: (context) => const BerandaPage(),
-                      //   ),
-                      // );
+                      c.change(3);
                     },
                     style: btnHome,
                     child: Row(
