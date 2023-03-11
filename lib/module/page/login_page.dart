@@ -90,7 +90,7 @@ class LoginPage extends StatelessWidget {
                             hintText: 'Password',
                           ),
                         ),
-                      ),
+                      ), //this note
                       const SizedBox(height: 38),
                       Container(
                         width: double.infinity,
