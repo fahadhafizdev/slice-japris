@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const GetMaterialApp(
-      title: 'japris',
+      title: 'japris', //note : name app
       debugShowCheckedModeBanner: false,
       home: LoginPage(),
     );
