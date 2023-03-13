@@ -81,7 +81,12 @@ class TargetKerjaView extends StatelessWidget {
           width: 135,
           child: ElevatedButton(
             style: btnDefault,
-            onPressed: () {},
+            onPressed: () {
+              KelSnackBar().show(
+                  title: 'Success',
+                  message: 'Berhasil submit',
+                  color: Colors.green);
+            },
             child: Text(
               'Submit',
               style: cWhiteTextStyle.copyWith(fontWeight: bold),
