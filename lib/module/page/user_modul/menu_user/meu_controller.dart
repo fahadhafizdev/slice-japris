@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 
-class MenuController extends GetxController {
+class MenuXController extends GetxController {
   RxInt page = 0.obs;
   RxBool showlogout = false.obs;
 

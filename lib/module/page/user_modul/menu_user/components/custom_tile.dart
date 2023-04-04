@@ -19,7 +19,7 @@ class CustomTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    MenuController c = Get.find();
+    MenuXController c = Get.find();
     return GestureDetector(
       behavior: HitTestBehavior.translucent,
       onTap: () {

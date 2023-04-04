@@ -22,6 +22,7 @@ class CustomContain extends StatelessWidget {
       return GestureDetector(
         onTap: () {
           c.showBtn.value = !c.showBtn.value;
+          print('object');
         },
         child: Align(
           alignment: Alignment.topCenter,

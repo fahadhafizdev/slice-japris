@@ -18,7 +18,7 @@ class MenuUser extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    MenuController c = Get.put(MenuController());
+    MenuXController c = Get.put(MenuXController());
     Widget bottomNavbar() {
       return Obx(
         () => Align(

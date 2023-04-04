@@ -1,15 +1,49 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:frontend_japris/module/page/admin_modul/presensi_admin/presensi_admin_view.dart';
 import 'package:frontend_japris/module/page/user_modul/menu_user/meu_controller.dart';
 import 'package:frontend_japris/module/shared/theme.dart';
 import 'package:get/get.dart';
 
+import '../../login_page.dart';
+
 class BerandaAdmin extends StatelessWidget {
   const BerandaAdmin({super.key});
 
   @override
   Widget build(BuildContext context) {
-    MenuController c = Get.find();
+    MenuXController c = Get.find();
+    Widget btnLogout() {
+      return Obx(
+        () => c.showlogout.value
+            ? GestureDetector(
+                onTap: () {
+                  Navigator.pushAndRemoveUntil(
+                      context,
+                      MaterialPageRoute(builder: ((context) => LoginPage())),
+                      (route) => false);
+                },
+                child: Align(
+                  alignment: Alignment.topRight,
+                  child: Container(
+                    height: 40,
+                    width: 100,
+                    margin: EdgeInsets.fromLTRB(12, 80, 12, 0),
+                    color: cGrey,
+                    child: Center(
+                      child: Text(
+                        'Logout',
+                        style: cBlackTextStyle.copyWith(fontWeight: semiBold),
+                      ),
+                    ),
+                  ),
+                ),
+              )
+            : SizedBox(),
+      );
+    }
+
     return Scaffold(
       body: Stack(
         children: [
@@ -23,37 +57,43 @@ class BerandaAdmin extends StatelessWidget {
           ),
           Align(
             alignment: Alignment.topRight,
-            child: Container(
-              height: 54,
-              width: 150,
-              margin: const EdgeInsets.fromLTRB(0, 17, 32, 0),
-              child: Stack(
-                children: [
-                  Align(
-                    alignment: Alignment.center,
-                    child: Container(
-                      width: 110,
-                      height: 25,
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 6,
-                        vertical: 5,
-                      ),
-                      decoration: BoxDecoration(color: cBlack),
-                      child: Text(
-                        'Selamat datang, Roy',
-                        style: cWhiteTextStyle.copyWith(fontSize: 8),
+            child: GestureDetector(
+              onTap: () {
+                log('message');
+                c.showlogout.value = !c.showlogout.value;
+              },
+              child: Container(
+                height: 54,
+                width: 150,
+                margin: const EdgeInsets.fromLTRB(0, 17, 32, 0),
+                child: Stack(
+                  children: [
+                    Align(
+                      alignment: Alignment.center,
+                      child: Container(
+                        width: 110,
+                        height: 25,
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 6,
+                          vertical: 5,
+                        ),
+                        decoration: BoxDecoration(color: cBlack),
+                        child: Text(
+                          'Selamat datang, Roy',
+                          style: cWhiteTextStyle.copyWith(fontSize: 8),
+                        ),
                       ),
                     ),
-                  ),
-                  const Align(
-                    alignment: Alignment.centerRight,
-                    child: Icon(
-                      Icons.account_circle,
-                      size: 35,
-                      color: Colors.white,
+                    const Align(
+                      alignment: Alignment.centerRight,
+                      child: Icon(
+                        Icons.account_circle,
+                        size: 35,
+                        color: Colors.white,
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
           ),
@@ -253,6 +293,7 @@ class BerandaAdmin extends StatelessWidget {
               ],
             ),
           ),
+          btnLogout(),
         ],
       ),
     );
