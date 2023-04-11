@@ -1,6 +1,8 @@
 import 'dart:ffi';
 
 import 'package:flutter/material.dart';
+import 'package:frontend_japris/module/page/admin_modul/data_karyawan_admin/data_karyawan.dart';
+import 'package:frontend_japris/module/page/admin_modul/data_karyawan_admin/list_menu_karyawan.dart';
 import 'package:frontend_japris/module/page/admin_modul/home_admin/beranda_admin.dart';
 import 'package:frontend_japris/module/page/admin_modul/presensi_admin/presensi_admin_view.dart';
 import 'package:frontend_japris/module/page/admin_modul/slip_gaji_admin/slip_gaji_admin_list.dart';
@@ -74,7 +76,7 @@ class MenuAdmin extends StatelessWidget {
                     ? TargetKerjaAdmin()
                     : c.page.value == 3
                         ? SlipGajiAdminlist()
-                        : SizedBox(),
+                        : ListMenuKaryawan(),
       );
     }
 

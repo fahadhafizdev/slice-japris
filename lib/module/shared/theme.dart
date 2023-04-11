@@ -52,3 +52,21 @@ final ButtonStyle btnGreen = ElevatedButton.styleFrom(
     ),
   ),
 );
+
+final ButtonStyle btnBlue = ElevatedButton.styleFrom(
+  backgroundColor: Color(0xff2313FF),
+  shape: const RoundedRectangleBorder(
+    borderRadius: BorderRadius.all(
+      Radius.circular(8),
+    ),
+  ),
+);
+
+final ButtonStyle btnRed = ElevatedButton.styleFrom(
+  backgroundColor: Color(0xffF10D0D),
+  shape: const RoundedRectangleBorder(
+    borderRadius: BorderRadius.all(
+      Radius.circular(8),
+    ),
+  ),
+);
